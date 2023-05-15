@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/edit.css')}}">
     {{-- <script src="{{asset('js/edit.js')}}"></script> --}}
-    <title>Document</title>
-</head>
-<title>laravel演習</title>
+    <title>焼き鳥予約</title>
 </head>
     <body>
         <div style="text-align: center;">

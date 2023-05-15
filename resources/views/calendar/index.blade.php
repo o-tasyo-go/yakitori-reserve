@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>焼き鳥予約</title>
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
 </head>
 <body>
