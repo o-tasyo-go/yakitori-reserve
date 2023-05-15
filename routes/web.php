@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CalendarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [CalendarController::class, 'index'])->name('calendar.index');
+Route::get('/calendar/{year}/{month}/{day}', [CalendarController::class, 'show'])->name('calendar.show');
+Route::get('/reserve/{year}/{month}/{day}', [CalendarController::class, 'reserve']);
+Route::post('/your-server-endpoint/{year}/{month}/{day}', [CalendarController::class, 'create']);
+Route::get('/edit/{id}', [CalendarController::class, 'edit']);
+Route::post('/edit/{year}/{month}/{day}', [CalendarController::class, 'update']);
+Route::post('/delete/{year}/{month}/{day}', [CalendarController::class, 'delete']);
 
 Route::prefix('items')->group(function () {
     Route::get('/', [App\Http\Controllers\ItemController::class, 'index']);
